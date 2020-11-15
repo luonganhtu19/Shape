@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class ProgramTest {
     public static void main(String[] args) {
@@ -37,5 +39,20 @@ public class ProgramTest {
 
         square=new Square(5.8,"yellow",true);
         System.out.println(square);
+
+        ComparableCircle[] circles=new ComparableCircle[3];
+        circles[0]=new ComparableCircle(3.6);
+        circles[1]=new ComparableCircle();
+        circles[2]=new ComparableCircle(3.5,"indigo",false);
+
+        System.out.println("Pre-sorted");
+        for (ComparableCircle circle1:circles){
+            System.out.println(circle1);
+        }
+        Arrays.sort(circles);
+        System.out.println("After-sorted");
+        for (ComparableCircle circle1:circles){
+            System.out.println(circle1);
+        }
     }
 }
