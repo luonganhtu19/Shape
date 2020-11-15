@@ -45,4 +45,9 @@ public class Rectangle extends Shape {
                 '}';
     }
 
+    @Override
+    public void resize(double percent) {
+        this.width=(double) Math.round(width*percent*100)/100;
+        this.length=(double) Math.round(length*percent*100)/100;
+    }
 }

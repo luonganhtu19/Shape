@@ -1,4 +1,4 @@
-public class Shape {
+public class Shape implements Resizeable{
     private String color;
     private boolean filled;
 
@@ -30,5 +30,9 @@ public class Shape {
                 "color='" + color + '\'' +
                 ", filled=" + filled +
                 '}';
+    }
+
+    @Override
+    public void resize(double percent) {
     }
 }

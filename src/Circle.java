@@ -32,4 +32,9 @@ public class Circle extends Shape {
                 super.toString()+
                 '}';
     }
+
+    @Override
+    public void resize(double percent) {
+        this.radius=(double) Math.round(radius*100*percent)/100;
+    }
 }

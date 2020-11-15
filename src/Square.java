@@ -34,4 +34,10 @@ public class Square extends Rectangle {
                 ", which is a subclass of"+super.toString()+
                 '}';
     }
+
+    @Override
+    public void resize(double percent) {
+        double side=(double) Math.round(this.getSide()*percent*100)/100;
+        this.setSide(side);
+    }
 }
