@@ -26,12 +26,16 @@ public class ProgramTest {
                     break;
                 case 5:
                     cylinder();
+                    break;
+                case 6:
+                    triangle();
+                    break;
                 case 0:
                     System.out.println("Bye bye");
                     return;
             }
             long end=System.currentTimeMillis();
-            System.out.println(end-start);
+            System.out.println("Time of run program "+(end-start));
         }while (true);
     }
     public static void menu(){
@@ -41,7 +45,13 @@ public class ProgramTest {
         System.out.println("3. Rectangle");
         System.out.println("4. CircleComparator");
         System.out.println("5. Cylinder");
+        System.out.println("6. Triangle");
         System.out.println("0. Exit");
+    }
+
+    public static void triangle(){
+        Triangle triangle=new Triangle(3f,5f,4f);
+        System.out.println(triangle);
     }
     public static void circles(){
         Circle circle = new Circle();
