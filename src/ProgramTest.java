@@ -24,6 +24,8 @@ public class ProgramTest {
                 case 4:
                     circleComparator();
                     break;
+                case 5:
+                    cylinder();
                 case 0:
                     System.out.println("Bye bye");
                     return;
@@ -38,6 +40,7 @@ public class ProgramTest {
         System.out.println("2. Square");
         System.out.println("3. Rectangle");
         System.out.println("4. CircleComparator");
+        System.out.println("5. Cylinder");
         System.out.println("0. Exit");
     }
     public static void circles(){
@@ -52,6 +55,10 @@ public class ProgramTest {
         circle = new Circle(3.5, "indigo", false);
         circle.resize(randomPercent());
         System.out.println(circle);
+    }
+    public static void cylinder(){
+        Cylinder cylinder=new Cylinder(7.8);
+        System.out.println(cylinder);
     }
     public static void square(){
         Shape shape=new Shape();
